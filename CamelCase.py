@@ -1,7 +1,7 @@
 # This program takesa sentence and converts it to camel case
 
 def main():
-    print('This program turns a sentence into camel case.')
+    display_banner()
     invalid_chars = '@#$%^&*()_-+=[[}{;:"<>/`~|'
     while True:
         invalid = False
@@ -26,5 +26,12 @@ def main():
     new_sentence = ''.join(new_words)  # Join all words together
     new_sentence = new_sentence[:1].lower() + new_sentence[1:]  # Make the first letter of the string lowercase
     print('Your sentence in camel case is: %s' % new_sentence)
+
+
+def display_banner():
+    """ Display program name in banner """
+    msg = 'AWSOME camelCaseGenerator PROGRAM'
+    stars = '*' * len(msg)
+    print(f'\n {stars} \n {msg} \n {stars}\n')
 
 main()
